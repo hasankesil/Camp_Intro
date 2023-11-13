@@ -8,11 +8,12 @@ namespace OOP3
 {
      class ApplicationManager
     {
-        public void Application1(ICreditManager creditManager)
+        public void Application1(ICreditManager creditManager, ILoggerService loggerService)
         {
 
 
             creditManager.Calculate();
+            loggerService.Log();
         }
         public void CreditFirstInformation(List<ICreditManager> credits)
         {
