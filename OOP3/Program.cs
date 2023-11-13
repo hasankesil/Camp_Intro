@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class Program
+   public class Program
     {
         static void Main(string[] args)
         {
@@ -14,7 +14,7 @@ namespace OOP3
             //financeCreditManager.Calculate();
 
             ICreditManager financeCreditManager = new FinanceCreditManager();
-            financeCreditManager.Calculate();
+           
 
 
 
@@ -23,7 +23,7 @@ namespace OOP3
             //vehicleCreditManager.Calculate();
 
             ICreditManager vehicleCreditManager = new VehicleCreditManager();
-            vehicleCreditManager.Calculate();
+         
 
 
 
@@ -34,9 +34,23 @@ namespace OOP3
 
 
             ICreditManager  homeCreditManager = new HomeCreditManager();
-            homeCreditManager.Calculate();
+
+
+            
+
+            ApplicationManager applicationManager = new ApplicationManager();
+            applicationManager.Application1(financeCreditManager);
+            applicationManager.Application1(vehicleCreditManager);
+            //applicationManager.Application1(homeCreditManager);
+
+            List<ICreditManager> credits = new List<ICreditManager> { financeCreditManager, vehicleCreditManager };
+
+            applicationManager.CreditFirstInformation(credits);
+
+
 
             Console.ReadLine();
+           
         }
     }
 }

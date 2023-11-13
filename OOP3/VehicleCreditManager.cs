@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP3
 {
-    internal class VehicleCreditManager : ICreditManager
+    public class VehicleCreditManager : ICreditManager
     {
         public void Calculate()
         {
